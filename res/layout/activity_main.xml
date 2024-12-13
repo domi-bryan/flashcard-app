@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SCREEN1_MainActivity"
+    android:padding="12dp"
+    android:background="#000"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true">
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/enabled"
+        android:paddingHorizontal="24dp"
+        android:textColor="#FFFFFF"
+        android:hint="Search decks..."
+        android:textColorHint="#555555"
+        android:textSize="16sp"
+        android:layout_weight="0.1"
+        android:layout_marginVertical="6dp"
+        android:imeOptions="actionDone"
+        android:inputType="text"/>
+    <TextView
+        android:id="@+id/recentActivities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:text="Recent Activities:"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="16sp"/>
+
+    <RelativeLayout
+        android:id="@+id/RelativeParent"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.85"
+        android:background="#000"
+        android:layout_marginVertical="6dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000"
+            android:scrollbars="vertical"
+            android:layoutAnimation="@anim/layout_animation"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:orientation="horizontal"
+        android:layout_marginVertical="6dp">
+
+        <Button
+            android:id="@+id/addNewDeck"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:background="@drawable/add_new_deck"
+            android:drawableStart="@drawable/ic_add"
+            android:text="Add New Deck"
+            android:textAlignment="textStart"
+            android:textColor="#00FFFF"
+            android:textSize="24sp"
+            android:onClick="addNewDeck"
+            android:padding="0dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.20"
+            android:id="@+id/settingButton"
+            android:drawableStart="@drawable/ic_notifications_none"
+            android:background="#00FFFFFF"
+            android:onClick="enableNotification"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".SCREEN2_Main2Activity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/prevNext"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="7">
+
+        <Button
+            android:id="@+id/previous"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:layout_weight="2"
+
+            android:drawableLeft="@drawable/ic_chevron_left"
+            android:onClick="prev"
+            android:textAlignment="viewStart"
+            android:textColor="#00FFFF"
+            android:textStyle="bold" />
+
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/easyFlipView"
+            android:layout_weight="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:autoFlipBack="true"
+            app:autoFlipBackTime="1000"
+            app:flipDuration="400"
+            app:flipEnabled="true"
+            app:flipFrom="front"
+            app:flipOnTouch="true"
+            app:flipType="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Answer"
+                android:background="@drawable/answer_side"
+                android:fontFamily="@font/open_sans_semibold"
+                android:gravity="center"
+                android:textColor="#BFFF00"
+                android:textSize="36sp" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Question"
+                android:background="@drawable/question_side"
+                android:fontFamily="@font/open_sans_semibold"
+                android:gravity="center"
+                android:textColor="#FFBC00"
+                android:textSize="36sp" />
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:drawableRight="@drawable/ic_chevron_right"
+            android:layout_weight="2"
+
+
+            android:onClick="next"
+            android:textAlignment="textEnd"
+            android:textColor="#00FFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/prevNext"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/enabled"
+                android:onClick="add"
+                android:text="ADD"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"/>
+
+
+            <Button
+                android:id="@+id/shuffle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/enabled"
+                android:onClick="shuffle"
+                android:text="SHUFFLE"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/notes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/enabled"
+                android:onClick="annotations"
+                android:text="NOTES"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/enabled"
+                android:onClick="edit"
+                android:text="EDIT"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/enabled"
+                android:onClick="delete"
+                android:text="Delete"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/Test"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/enabled"
+                android:onClick="testMode"
+                android:text="Quiz"
+                android:textColor="#FFFFFF"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

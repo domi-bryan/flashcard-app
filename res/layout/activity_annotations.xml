@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="30dp"
+    tools:context=".SCREEN7_Annotations">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Here's what you wrote:"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/annotationBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="18"
+        android:background="@drawable/enabled"
+        android:gravity="center"
+        android:hint="Type something..."
+        android:textColor="#FFFFFF"
+        android:textColorHint="#555555"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/saveAnnotationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:background="@drawable/add_new_deck"
+        android:onClick="saveAnnotations"
+        android:text="Save Annotations"
+        android:textColor="#00FFFF"
+        android:textSize="24sp" />
+</LinearLayout>

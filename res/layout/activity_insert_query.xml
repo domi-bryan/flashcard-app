@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".SCREEN5_InsertCard"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/Addquestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#FFFFFF"
+        android:hint="QUESTION"
+        android:textColorHint="#888888"
+        android:textAlignment="center"
+        android:background="@drawable/editable"
+        android:textSize="36sp"
+        android:layout_weight="5.5" />
+
+    <EditText
+        android:id="@+id/Addanswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="#FFFFFF"
+        android:hint="ANSWER"
+        android:textColorHint="#888888"
+        android:textAlignment="center"
+        android:background="@drawable/editable"
+        android:textSize="36sp"
+        android:layout_weight="5.5" />
+
+    <Button
+        android:id="@+id/Insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/enabled"
+        android:text="Insert new Card"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/AddAnswer"
+        android:layout_weight="1" />
+</LinearLayout>

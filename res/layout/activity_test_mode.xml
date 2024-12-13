@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SCREEN8_TestMode"
+    android:background="#000"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@drawable/question_side"
+        android:layout_marginBottom="12dp"
+        android:textSize="36sp"
+        android:text="Question"
+        android:textColor="#FFBC00"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/answerText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="5"
+        android:background="@drawable/editable"
+        android:gravity="center"
+        android:hint="@string/type_your_answer_here"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:textSize="36sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/nextQuestion"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="nextQuestion"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/enabled"
+            android:textColor="#FFFFFF"
+            android:text="Check Answer" />
+        <Button
+            android:id="@+id/skip"
+            android:background="@drawable/disabled"
+            android:text="Skip"
+            android:textColor="#555555"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:onClick="skip"
+            android:layout_weight="0.5">
+        </Button>
+    </LinearLayout>
+</LinearLayout>
